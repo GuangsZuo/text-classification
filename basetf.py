@@ -12,11 +12,10 @@ class basetf:
                                            initializer=tf.constant_initializer(1))
 
     def init_session(self):
-        self.session = tf.Session(config=self.config)
-        self.session.run(tf.global_variables_initializer)
+        self.sess = tf.Session(config=self.config)
         self.saver = tf.train.Saver()
 
     def close_session(self):
-        self.session.close()
+        self.sess.close()
 
 
